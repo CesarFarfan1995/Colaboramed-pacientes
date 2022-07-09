@@ -39,7 +39,6 @@ export class HomePage implements OnInit {
       .pipe(map(() => navigator.onLine))
       .subscribe((status) => {
         if (!status) {
-          console.log('si mi rey no hay net que chimbo...viva amlo');
           this.router.navigate(['/net-problem']);
         }
 
