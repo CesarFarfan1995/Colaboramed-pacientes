@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { Network } from '@awesome-cordova-plugins/network/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [
     InAppBrowser,
+    Network,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],
